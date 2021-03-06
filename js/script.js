@@ -69,12 +69,32 @@
 // console.log(compare(user,choice));
 
 //BASIC CALCULATOR
-import * as calc from './modules/calulator.js';
-console.log(calc.add(5, 5));
+import * as calc from './modules/calculator.js';
 
-// let x = Number(prompt('Give me a number'));
-// let y = Number(prompt('Give me a number'));
-// let operation = prompt('What operation would you like to perform?(add, subtract, multiply, divide)');
+function start() {
+    
+    while (true) {
+        let x = Number(prompt('Give me a number'));
+        let y = Number(prompt('Give me a number'));
+        
+        let operation = prompt('What operation would you like to perform?(add, subtract, multiply, divide)'); 
+  
+        
+        if (operation === 'add') {
+            alert(calc.add(x,y));
+        } else if (operation === 'subtract') {
+            alert(calc.subtract(x,y));
+        } else if (operation === 'multiply') {
+            alert(calc.multiply(x,y));
+        } else if (operation === 'divide') {
+            alert(calc.divide(x,y));}
+    }    
+}
+start();
+
+
+
+    
 
 
 
